@@ -18,7 +18,7 @@ REPO='CFD-GO/TCLB.git'
 git clone --branch=$BRANCH  https://github.com/$REPO
 cd TCLB
 make configure
-./configure --enable-double --disable-cuda  --with-python --enable-paranoid --enable-cpp11
+./configure --enable-double --with-python --enable-paranoid --enable-cpp11 $CONFIGURE_FLAGS
 
 #for MODEL in $(cat .travis.yml | grep "MODEL=" | sed 's/.*=//g'); do
 for MODEL in "d2q9"; do
