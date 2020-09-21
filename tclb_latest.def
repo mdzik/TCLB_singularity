@@ -10,6 +10,8 @@ From: mdzik/default/tclb:ubuntu1604_cuda10
     cd /opt && git clone https://github.com/mdzik/TCLB_singularity
     mkdir /opt/r_libs
     R_LIBS_USER=/opt/r_libs /opt/TCLB_singularity/install.sh rdep
+    R_LIBS_USER=/opt/r_libs /opt/TCLB_singularity/install.sh rinside
+
 
 
 %appinstall cpu  
