@@ -1,0 +1,27 @@
+#!/bin/zsh
+
+SPATH=$(dirname $0:A)
+BUILDPATH=/home/mdzik/projekty/TCLB/
+
+SIF=$SPATH/"tclb_latest.sif"
+SHELLCMD="singularity exec $SIF "
+
+
+function scmd {
+    eval $SHELLCMD $@
+}
+
+function make {
+    MYPATH=$(pwd)
+    print $MYPATH
+    eval  cd $BUILDPATH
+    eval  $SHELLCMD make $@
+    eval cd $MYPATH
+}
+
+
+function tclb() {
+	scmd mpirun -np 2 $BUILDPATH/CLB/$1/main $2
+}
+
+
