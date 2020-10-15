@@ -7,7 +7,8 @@ Image should contain all dependencies for full-futured TCLB.
 
 HOWTO:
 
-- install (Singularity)[https://sylabs.io/guides/3.6/user-guide/quick_start.html]
+- install [Singularity](https://sylabs.io/guides/3.6/user-guide/quick_start.html)
+- run the lolcow example, check if it works as intended
 - pull image `singularity pull --arch amd64 library://mdzik/tclb/tclb:latest`
 - edit paths in 'startEnvironment.sourceMe'
 - source It! :)
