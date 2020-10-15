@@ -14,4 +14,4 @@ HOWTO:
 - source It! :)
 - go to TCLB directory
 - `scmd ./configure --disable-cuda --with-python --enable-double --enable-keepcode  --enable-rinside`
-- `make XXX`
+- `make XXX`, this script overwrites make for whole session - you could run it from anywhere and still compile TCLB ;)
