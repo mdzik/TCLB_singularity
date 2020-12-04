@@ -7,10 +7,11 @@ Image should contain all dependencies for full-futured TCLB.
 
 HOWTO:
 
-- install (Singularity)[https://sylabs.io/guides/3.6/user-guide/quick_start.html]
+- install [Singularity](https://sylabs.io/guides/3.6/user-guide/quick_start.html)
+- run the lolcow example, check if it works as intended
 - pull image `singularity pull --arch amd64 library://mdzik/tclb/tclb:latest`
 - edit paths in 'startEnvironment.sourceMe'
 - source It! :)
 - go to TCLB directory
 - `scmd ./configure --disable-cuda --with-python --enable-double --enable-keepcode  --enable-rinside`
-- `make XXX`
+- `make XXX`, this script overwrites make for whole session - you could run it from anywhere and still compile TCLB ;)
